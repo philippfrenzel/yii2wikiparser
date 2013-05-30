@@ -11,6 +11,18 @@
 namespace yii2wikiparser;
 
 use yii2wikiparser\rule;
+use yii2wikiparser\extension;
+use yii2wikiparser\image;
+use yii2wikiparser\interwiki_link;
+use yii2wikiparser\unnamed_interwiki_link;
+use yii2wikiparser\default_fallback;
+use yii2wikiparser\named_uri;
+use yii2wikiparser\unnamed_uri;
+use yii2wikiparser\named_link;
+use yii2wikiparser\unnamed_link;
+use yii2wikiparser\node;
+
+
 
 class creole{
     
