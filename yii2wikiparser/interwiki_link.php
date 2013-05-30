@@ -10,6 +10,8 @@
 
 namespace yii2wikiparser;
 
+use node;
+
 class interwiki_link extends rule{
     
     function __construct($params = array()) {
