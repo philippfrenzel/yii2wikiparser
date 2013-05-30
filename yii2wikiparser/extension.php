@@ -12,7 +12,7 @@ namespace yii2wikiparser;
 
 class extension extends rule{
     
-    public function __construct __construct($params = array()) {
+    public function __construct($params = array()) {
         parent::__construct($params);
     }
 
