@@ -233,7 +233,7 @@ class yii2wikiparser{
         $data = preg_replace('/\r\n?/', "\n", $data);
         $options = array_merge($this->options, $options);
         $this->grammar['root']->apply($node, $data, $options);
-        echo $node->as_string();exit;
+        return $node->as_string();
     }
 
 
