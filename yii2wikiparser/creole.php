@@ -131,7 +131,7 @@ class creole{
                 'capture' => 1
             ),
 
-            'img' => new creole_rule_image(array(
+            'img' => new image(array(
                 'regex' => '/' . $rx['image'] . '/',
             )),
 
@@ -148,30 +148,30 @@ class creole{
                 'attrs' => array( 'class' => 'escaped' )
             ),
 
-            'named_uri' => new creole_rule_named_uri(array(
+            'named_uri' => new named_uri(array(
                 'regex' => '/\[\[(' . $rx['uri'] . ')\|(' . $rx['link_text'] . ')\]\]/'
             )),
-            'unnamed_uri' => new creole_rule_unnamed_uri(array(
+            'unnamed_uri' => new unnamed_uri(array(
                 'regex' => '/\[\[(' . $rx['uri'] . ')\]\]/'
             )),
-            'named_link' => new creole_rule_named_link(array(
+            'named_link' => new named_link(array(
                 'regex' => '/\[\[(' . $rx['link'] . ')\|(' . $rx['link_text'] . ')\]\]/'
             )),
-            'unnamed_link' => new creole_rule_unnamed_link(array(
+            'unnamed_link' => new unnamed_link(array(
                 'regex' => '/\[\[(' . $rx['link'] . ')\]\]/'
             )),
-            'named_interwiki_link' => new creole_rule_named_interwiki_link(array(
+            'named_interwiki_link' => new named_interwiki_link(array(
                 'regex' => '/\[\[(' . $rx['interwiki_link'] . ')\|(' . $rx['link_text'] . ')\]\]/'
             )),
-            'unnamed_interwiki_link' => new creole_rule_unnamed_interwiki_link(array(
+            'unnamed_interwiki_link' => new unnamed_interwiki_link(array(
                 'regex' => '/\[\[(' . $rx['interwiki_link'] . ')\]\]/'
             )),
 
-            'raw_uri' => new creole_rule_unnamed_uri(array(
+            'raw_uri' => new unnamed_uri(array(
                 'regex' => '/(' . $rx['raw_uri'] . ')/',
             )),
 
-            'extension' => new creole_rule_extension(array(
+            'extension' => new extension(array(
                 'regex' => '/' . $rx['ext'] . '/',
             ))
         );
@@ -209,7 +209,7 @@ class creole{
                 &$g['tt'], &$g['img']
             );
 
-        $g['root'] = new creole_rule(array(
+        $g['root'] = new rule(array(
             'children' => array(
                 &$g['h1'], &$g['h2'], &$g['h3'], &$g['h4'], &$g['h5'], &$g['h6'],
                 &$g['hr'], &$g['ul'], &$g['ol'], &$g['pre'], &$g['table'], &$g['extension']
