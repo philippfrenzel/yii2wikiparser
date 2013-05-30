@@ -10,7 +10,7 @@
 
 namespace yii2wikiparser;
 
-class unnamedlink extends namedlink{
+class unnamedlink extends link{
     
     public function __construct($params = array()) {
         parent::__construct($params);

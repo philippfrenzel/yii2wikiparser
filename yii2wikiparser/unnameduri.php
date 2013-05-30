@@ -10,7 +10,7 @@
 
 namespace yii2wikiparser;
 
-class unnameduri extends nameduri{
+class unnameduri extends uri{
     
     public function __construct($params = array()) {
         parent::__construct($params);
