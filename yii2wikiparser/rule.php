@@ -63,7 +63,7 @@ class rule{
         if (!is_object($this->fallback)) {
             $this->fallback = $this->fallback
                 ? new rule($this->fallback)
-                : new default_fallback();
+                : new defaultfallback();
         }
 
         while (true) {
