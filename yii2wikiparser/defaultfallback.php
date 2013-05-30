@@ -12,7 +12,7 @@ namespace yii2wikiparser;
 
 class defaultfallback extends rule{
     
-    public function __construct apply($node, $data, $options = array()) {
+    public function apply($node, $data, $options = array()) {
         $node->append($data);
     }
     
