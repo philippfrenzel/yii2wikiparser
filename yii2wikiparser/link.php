@@ -12,7 +12,7 @@ namespace yii2wikiparser;
 
 use node;
 
-class namedlink extends rule{
+class link extends rule{
     
     public function __construct($params = array()) {
         parent::__construct($params);

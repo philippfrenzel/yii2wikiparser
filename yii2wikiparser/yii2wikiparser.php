@@ -149,19 +149,19 @@ class yii2wikiparser{
                 'attrs' => array( 'class' => 'escaped' )
             ),
 
-            'named_uri' => new nameduri(array(
+            'named_uri' => new uri(array(
                 'regex' => '/\[\[(' . $rx['uri'] . ')\|(' . $rx['link_text'] . ')\]\]/'
             )),
             'unnamed_uri' => new unnameduri(array(
                 'regex' => '/\[\[(' . $rx['uri'] . ')\]\]/'
             )),
-            'named_link' => new namedlink(array(
+            'named_link' => new link(array(
                 'regex' => '/\[\[(' . $rx['link'] . ')\|(' . $rx['link_text'] . ')\]\]/'
             )),
             'unnamed_link' => new unnamedlink(array(
                 'regex' => '/\[\[(' . $rx['link'] . ')\]\]/'
             )),
-            'named_interwiki_link' => new namedinterwikilink(array(
+            'named_interwiki_link' => new interwikilink(array(
                 'regex' => '/\[\[(' . $rx['interwiki_link'] . ')\|(' . $rx['link_text'] . ')\]\]/'
             )),
             'unnamed_interwiki_link' => new unnamedinterwikilink(array(
