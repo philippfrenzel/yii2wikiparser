@@ -14,18 +14,18 @@ use node;
 
 class named_link extends rule{
     
-    function __construct($params = array()) {
+    public function __construct($params = array()) {
         parent::__construct($params);
     }
 
-    function format_link($link, $format) {
+    public function format_link($link, $format) {
         if (function_exists($format)) {
             return call_user_func($format, $link);
         }
         return sprintf($format, rawurlencode($link));
     }
 
-    function build($node, $matches, $options = array()) {
+    public function build($node, $matches, $options = array()) {
         $link = preg_replace('/~(.)/', '$1', $matches[1][0]);
 
         if (isset($options['current_page']) && $options['current_page'] == $link) {

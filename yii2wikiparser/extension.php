@@ -12,11 +12,11 @@ namespace yii2wikiparser;
 
 class extension extends rule{
     
-    function __construct($params = array()) {
+    public function __construct __construct($params = array()) {
         parent::__construct($params);
     }
 
-    function build($node, $matches, $options = array()) {
+    public function build($node, $matches, $options = array()) {
         if (isset($options['extension']) && is_callable($options['extension'])) {
             call_user_func($options['extension'], $node, $matches[1][0]);
         }

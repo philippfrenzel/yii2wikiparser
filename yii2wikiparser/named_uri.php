@@ -14,11 +14,11 @@ use node;
 
 class named_uri extends rule{
     
-    function __construct($params = array()) {
+    public function __construct($params = array()) {
         parent::__construct($params);
     }
 
-    function build($node, $matches, $options = array()) {
+    public function build($node, $matches, $options = array()) {
         $link = new node('a');
         $link->set_attribute('href', rawurldecode($matches[1][0]));
 

@@ -14,11 +14,11 @@ use node;
 
 class image extends rule{
     
-    function __construct($params = array()) {
+    public function __construct($params = array()) {
         parent::__construct($params);
     }
 
-    function build($node, $matches, $options = array()) {
+    public function build($node, $matches, $options = array()) {
         $img = new node('img');
         $img->set_attribute('src', $matches[1][0]);
         $alt = isset($matches[2]) ? $matches[2][0] : '';

@@ -16,19 +16,19 @@ class node extends creole{
     public $attrs = NULL;
     public $content = array();
 
-    function __construct($tag = false) {
+    public function __construct($tag = false) {
         $this->tag = $tag;
     }
 
-    function append($node) {
+    public function append($node) {
         $this->content[] = $node;
     }
 
-    function set_attribute($attr, $value) {
+    public function set_attribute($attr, $value) {
         $this->attrs[$attr] = $value;
     }
 
-    function as_string() {
+    public function as_string() {
         $result = '';
         foreach ($this->content as $item) {
             $result .= is_object($item) ? $item->as_string() : self::mild_htmlspecialchars($item);

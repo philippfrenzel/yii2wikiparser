@@ -11,6 +11,7 @@
 namespace yii2wikiparser;
 
 class rule extends creole{
+    
     public $regex = false;
     public $capture = false;
     public $replace_regex = false;
@@ -20,13 +21,13 @@ class rule extends creole{
     public $children = array();
     public $fallback = false;
 
-    function __construct($params = array()) {
+    public function __construct($params = array()) {
         foreach ($params as $k => $v) {
             eval('$this->' . $k . ' = $v;');
         }
     }
 
-    function build($node, $matches, $options = array()) {
+    public function build($node, $matches, $options = array()) {
         if ($this->capture !== false) {
             $data = $matches[$this->capture][0];
         }
@@ -51,12 +52,12 @@ class rule extends creole{
         }
     }
 
-    function match($data) {
+    public function match($data) {
         return preg_match($this->regex, $data, $matches, PREG_OFFSET_CAPTURE)
             ? $matches : false;
     }
 
-    function apply($node, $data, $options = array()) {
+    public function apply($node, $data, $options = array()) {
         $tail = $data;
 
         if (!is_object($this->fallback)) {

@@ -14,11 +14,11 @@ use node;
 
 class interwiki_link extends rule{
     
-    function __construct($params = array()) {
+    public function __construct __construct($params = array()) {
         parent::__construct($params);
     }
 
-    function build($node, $matches, $options = array()) {
+    public function __construct build($node, $matches, $options = array()) {
         if (isset($options['interwiki'])) {
             preg_match('/(.*?):(.*)/', $matches[1][0], $m);
         }

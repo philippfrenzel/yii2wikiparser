@@ -12,11 +12,11 @@ namespace yii2wikiparser;
 
 class unnamed_link extends named_link{
     
-    function __construct($params = array()) {
+    public function __construct($params = array()) {
         parent::__construct($params);
     }
 
-    function build($node, $matches, $options = array()) {
+    public function build($node, $matches, $options = array()) {
         return parent::build($node, array($matches[0], $matches[1], $matches[1]), $options);
     }
 
