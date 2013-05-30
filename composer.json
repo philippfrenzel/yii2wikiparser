@@ -1,11 +1,11 @@
 {
-    "name": "philippfrenzel/yiimetroui",
-    "description": "Yii2 MetroUI Widget Extension",
-    "keywords": ["yii","yii2","extension","metroui"],
+    "name": "philippfrenzel/yii2wikiparser",
+    "description": "Yii2 Creole Syntax Parser",
+    "keywords": ["yii","yii2","extension","wiki"],
     "homepage": "http://www.frenzel.net/",
     "type": "library",
     "license": "BSD-3-Clause",
-    "version": "0.0.8",
+    "version": "0.0.1",
     "authors": [
         {
             "name": "Philipp Frenzel",
@@ -15,13 +15,13 @@
         }
     ],
     "support": {
-        "source": "https://github.com/philippfrenzel/yiimetroui"        
+        "source": "https://github.com/philippfrenzel/yii2wikiparser"        
     },
     "minimum-stability": "dev",
     "require": {
         "yiisoft/yii2": "*"
     },
     "autoload": {
-        "psr-0": { "yiimetroui\\": "/" }
+        "psr-0": { "yii2wikiparser\\": "/" }
     }
 }
