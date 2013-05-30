@@ -10,6 +10,8 @@
 
 namespace yii2wikiparser;
 
+use yii2wikiparser\rule;
+
 class creole{
     
     /**
