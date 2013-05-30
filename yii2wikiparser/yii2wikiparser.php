@@ -10,20 +10,8 @@
 
 namespace yii2wikiparser;
 
-use rule;
-use extension;
-use image;
-use interwiki_link;
-use unnamed_interwiki_link;
-use default_fallback;
-use named_uri;
-use unnamed_uri;
-use named_link;
-use unnamed_link;
-use node;
 
-
-class creole{
+class yii2wikiparser{
     
     /**
 	 * @var array the grammar for the parser.
@@ -161,26 +149,26 @@ class creole{
                 'attrs' => array( 'class' => 'escaped' )
             ),
 
-            'named_uri' => new named_uri(array(
+            'named_uri' => new nameduri(array(
                 'regex' => '/\[\[(' . $rx['uri'] . ')\|(' . $rx['link_text'] . ')\]\]/'
             )),
-            'unnamed_uri' => new unnamed_uri(array(
+            'unnamed_uri' => new unnameduri(array(
                 'regex' => '/\[\[(' . $rx['uri'] . ')\]\]/'
             )),
-            'named_link' => new named_link(array(
+            'named_link' => new namedlink(array(
                 'regex' => '/\[\[(' . $rx['link'] . ')\|(' . $rx['link_text'] . ')\]\]/'
             )),
-            'unnamed_link' => new unnamed_link(array(
+            'unnamed_link' => new unnamedlink(array(
                 'regex' => '/\[\[(' . $rx['link'] . ')\]\]/'
             )),
-            'named_interwiki_link' => new named_interwiki_link(array(
+            'named_interwiki_link' => new namedinterwikilink(array(
                 'regex' => '/\[\[(' . $rx['interwiki_link'] . ')\|(' . $rx['link_text'] . ')\]\]/'
             )),
-            'unnamed_interwiki_link' => new unnamed_interwiki_link(array(
+            'unnamed_interwiki_link' => new unnamedinterwikilink(array(
                 'regex' => '/\[\[(' . $rx['interwiki_link'] . ')\]\]/'
             )),
 
-            'raw_uri' => new unnamed_uri(array(
+            'raw_uri' => new unnameduri(array(
                 'regex' => '/(' . $rx['raw_uri'] . ')/',
             )),
 

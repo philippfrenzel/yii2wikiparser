@@ -12,7 +12,7 @@ namespace yii2wikiparser;
 
 use node;
 
-class interwiki_link extends rule{
+class interwikilink extends rule{
     
     public function __construct __construct($params = array()) {
         parent::__construct($params);

@@ -10,7 +10,7 @@
 
 namespace yii2wikiparser;
 
-class rule extends creole{
+class rule{
     
     public $regex = false;
     public $capture = false;

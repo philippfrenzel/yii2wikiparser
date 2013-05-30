@@ -10,14 +10,20 @@
 
 namespace yii2wikiparser;
 
-class unnamed_link extends named_link{
+use node;
+
+class nameduri extends rule{
     
     public function __construct($params = array()) {
         parent::__construct($params);
     }
 
     public function build($node, $matches, $options = array()) {
-        return parent::build($node, array($matches[0], $matches[1], $matches[1]), $options);
+        $link = new node('a');
+        $link->set_attribute('href', rawurldecode($matches[1][0]));
+
+        $this->apply($link, $matches[2][0], $options);
+        $node->append($link);
     }
 
 }

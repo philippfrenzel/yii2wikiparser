@@ -10,10 +10,14 @@
 
 namespace yii2wikiparser;
 
-class default_fallback extends rule{
+class unnamedlink extends namedlink{
     
-    public function __construct apply($node, $data, $options = array()) {
-        $node->append($data);
+    public function __construct($params = array()) {
+        parent::__construct($params);
     }
-    
+
+    public function build($node, $matches, $options = array()) {
+        return parent::build($node, array($matches[0], $matches[1], $matches[1]), $options);
+    }
+
 }

@@ -10,14 +10,10 @@
 
 namespace yii2wikiparser;
 
-class unnamed_interwiki_link extends interwiki_link{
+class defaultfallback extends rule{
     
-    public function __construct($params = array()) {
-        parent::__construct($params);
+    public function __construct apply($node, $data, $options = array()) {
+        $node->append($data);
     }
-
-    public function build($node, $matches, $options = array()) {
-        return parent::build($node, array($matches[0], $matches[1], $matches[1]), $options);
-    }
-
+    
 }

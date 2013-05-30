@@ -10,7 +10,7 @@
 
 namespace yii2wikiparser;
 
-class unnamed_uri extends named_uri{
+class unnamedinterwikilink extends interwikilink{
     
     public function __construct($params = array()) {
         parent::__construct($params);

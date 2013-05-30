@@ -10,7 +10,7 @@
 
 namespace yii2wikiparser;
 
-class node extends creole{
+class node extends yii2wikiparser{
     
     public $tag = NULL;
     public $attrs = NULL;
