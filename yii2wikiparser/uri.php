@@ -10,8 +10,6 @@
 
 namespace yii2wikiparser;
 
-use node;
-
 class uri extends rule{
     
     public function __construct($params = array()) {
